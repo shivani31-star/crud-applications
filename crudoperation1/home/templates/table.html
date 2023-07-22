@@ -34,8 +34,8 @@ tr:nth-child(even) {
     {% for t in data %}
     <td>{{t.name}}</td>
     <td>{{t.email}}</td>
-    <td><button type="button">Update</button></td>
-    <td><button type="button">Delete</button></td>
+    <td><a  href="/update/{{t.id}}" type="button">Update</a></td>
+    <td><a href="{% url 'delete' t.pk %}" type="button">Delete</a></td>
   </tr>
 {% endfor %}
 </table>
